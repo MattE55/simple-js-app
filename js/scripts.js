@@ -1,35 +1,17 @@
 let pokemonList = [
-  {name:"bulbasaur",type:["grass","poison"], height:2},
-  {name:"pikachu",type:"electric",height:0.9},
-  {name:"machamp",type:"fighting",height:6}
+  {name: "bulbasaur",type:[ "grass","poison"], height: 2},
+  {name: "pikachu",type: "electric", height: 0.9},
+  {name: "machamp",type: "fighting", height: 6},
   ]
-console.log(pokemonList)
 
-for (let i=0; i < pokemonList.length; i++){
-  if (pokemonList[i].height <5 && pokemonList[i].height >1){
-    console.log(pokemonList[i].name + " is an average Pokemon");
-  }else if (pokemonList[i].height >5){
-    console.log(pokemonList[i].name + " is a large Pokemon");
+
+
+for (let i = 0; i < pokemonList.length; i++) {
+  if (pokemonList[i].height < 5 && pokemonList[i].height > 1) {
+    document.write("<p>" + pokemonList[i].name + ' height ' + pokemonList[i].height + " this is an average Pokemon </p>");
+  }else if (pokemonList[i].height > 5) {
+    document.write("<p>" + pokemonList[i].name + ' height ' + pokemonList[i].height + " this is a large Pokemon </p>");
   }else {
-    console.log(pokemonList[i].name + " is a small Pokemon");
+    document.write("<p>" + pokemonList[i].name + ' height ' + pokemonList[i].height + " this is a small Pokemon </p>");
   }
 }
-document.write(pokemonList)
-
-let repository = [
-  {
-    name: "bulbasaur",
-    height: 2,
-    type: ["grass", "poison"]
-  },
-  {
-    name: "pikachu",
-    height: 0.9,
-    type: ["electric"]
-  },
-  {
-    name: "machamp",
-    height: 6,
-    type: ["fighting"]
-  }
-]
