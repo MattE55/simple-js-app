@@ -38,10 +38,12 @@ let pokemonRepository = (function () {
   };
 })();
 
-document.write(pokemonRepository.getAll() );
+document.write(pokemonRepository.getAll());
+pokemonRepository.add({ name: 'bulbasaur' });
+document.write(pokemonRepository.getAll());
 
-pokemonList.forEach(function add() {
-  document.write(pokemon.name + ' is ' + pokemon.type + ' type ');
+pokemonList.forEach(function(pokemon) {
+  document.write(pokemonList.name + ' is ' + pokemonList.height + ' tall ');
 });
 
 
