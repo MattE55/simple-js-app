@@ -63,8 +63,3 @@ pokemonRepository.add({
 pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonRepository.addListItem(pokemon);
 });
-
-
-button.addEventListener('click', function showDetails(pokemon) {
-  console.log(pokemon.name);
-});
