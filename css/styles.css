@@ -70,9 +70,13 @@ body {
 }
 
 .modal p {
-text-align: left;
+  float: left;
+  margin-left: 200px;
+  margin-top: 40px;
 }
 
 .modal img {
-  align-content: center;
+  float:right;
+  margin-right: 180px;
+  margin-top: 0px;
 }
