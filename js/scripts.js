@@ -2,6 +2,7 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   let modalContainer = document.querySelector('#modal-container');
+  let container = document.querySelector('#image-container');
 
   function add(pokemon) {
     if (
@@ -64,11 +65,11 @@ let pokemonRepository = (function () {
 
   function showDetails(item){
     pokemonRepository.loadDetails(item).then(function () {
-      console.log(item);
+      showModal(item.name , item.height, item.imageUrl);
     });
   }
 
-  function showModal(title, text) {
+  function showModal(title, text, image) {
     modalContainer.innerHTML = '';
     let modal = document.createElement('div');
     modal.classList.add('modal');
@@ -84,9 +85,13 @@ let pokemonRepository = (function () {
     let contentElement = document.createElement('p');
     contentElement.innerText = text;
 
+    let imageElement = document.createElement('img');
+    imageElement.src = image;
+
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(contentElement);
+    modal.appendChild(imageElement);
     modalContainer.appendChild(modal);
 
     modalContainer.classList.add('is-visible');
@@ -111,6 +116,7 @@ let pokemonRepository = (function () {
   document.querySelector('#show-modal').addEventListener('click', () => {
     showModal('Modal title', 'This is the modal content!');
   });
+
 
   return {
     add: add,
