@@ -2,10 +2,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header .col div {
-  background-color: green;
-  border: 5px solid black;
-  height: 150px;
+header .pokemon-list li {
+  background-color: blue;
+  border: 1px solid black;
+  height: 35px;
+  width: 100px;
 }
 /*.button-class {
   background-color: #4caf50;
