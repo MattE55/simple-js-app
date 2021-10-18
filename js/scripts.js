@@ -59,6 +59,7 @@ let pokemonRepository = (function () {
       item.imageUrlBack = details.sprites.back_default;
       item.abilities = details.abilities;
       item.height = details.height;
+      item.weight = details.weight;
       item.types = details.types;
     }).catch(function (e) {
       console.error(e);
@@ -74,19 +75,22 @@ let pokemonRepository = (function () {
   function showModal(item) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
-    let modalHeader = $(".modal-header");
+    //let modalHeader = $(".modal-header");
 
     modalTitle.empty();
     modalBody.empty();
 
     let nameElement = $("<h1>" + item.name + "</h1>");
     let imageElementFront = $('<img class="modal-img" style="width:50%">');
-    imageElemenetFront.attr("src", item.imageUrlFront);
+    imageElementFront.attr("src", item.imageUrlFront);
     let imageElementBack = $('<img class="modal-img" style="width:50%">');
     imageElementBack.attr("src", item.imageUrlBack);
     let heightElement = $("<p>" + "height : " + item.height + "</p>");
     let weightElement = $("<p>" + "weight : " + item.weight + "</p>");
-    let typesElement = $("<p>" + "types : " + item.types + "</p>");
+    let typesElement = $(
+      "<p>" +
+        "types : " +
+        item.types.map((singleType) => singleType.type.name).join(", ") + "</p>");
     let abilitiesElement = $("<p>" + "abilities : " + item.abilities + "</p");
 
     modalTitle.append(nameElement);
