@@ -1,12 +1,19 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: cyan;
 }
+
+.title h1 {
+  align-self: auto;
+}
+
 
 .pokemon-list li button {
   background-color: lightblue;
   border: 1px solid black;
   height: 35px;
   width: 100px;
+  column-count: 4;
 }
 /*.button-class {
   background-color: #4caf50;
