@@ -3,11 +3,15 @@ body {
   background-color: cyan;
 }
 
+
+
 .title h1 {
   align-self: auto;
 }
 
-
+li {
+  list-style: none;
+}
 .pokemon-list li button {
   background-color: lightblue;
   border: 1px solid black;
