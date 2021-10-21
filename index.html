@@ -11,20 +11,19 @@
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Pokedex</a>
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search Pokemon" aria-label="Search" data-target="nameElement">
-        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" id="filter" placeholder="Search Pokemon" aria-label="Search">
+        <!---button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button--->
       </form>
     </nav>
-    <div class="row justify-content-center">
-      <h1 class="title">Pokedex</h1>
+    <div>
+      <h1 class="title row justify-content-center">Pokedex</h1>
     </div>
         <!-- Button trigger modal -->
     <div class="container">
-      <div class="row justify-content-center">
-        <ul class="list-group">
-          <li class="pokemon-list"></li>
-        </ul>
-      </div>
+      <ul class="list-group">
+        <li class="pokemon-list">
+        </li>
+      </ul>
     </div>
 
     <!-- Modal -->
